@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极速清理大师下载官网 - 一键清理电脑垃圾 让电脑快如飞</title>
+    <meta name="description" content="极速清理大师下载官网，提供v5.2最新版电脑版免费下载。专为Windows用户打造的电脑清理优化工具，智能扫描系统垃圾、浏览器缓存、软件残留，C盘一键瘦身，微信QQ垃圾专清，开机加速优化，隐私保护擦除，大文件分析搬家，让电脑轻快如新。">
+    <meta name="keywords" content="极速清理大师,极速清理大师官网,极速清理大师下载,电脑垃圾清理,C盘瘦身工具,电脑加速软件,一键清理,系统优化大师">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="IndexNow" href="https://www.jisqlipc.com.cn/34d1c66cc3864b29aa2e3a92b4f694e4">
+    
+    <!-- Schema.org SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "极速清理大师",
+        "operatingSystem": "Windows 7/8/10/11",
+        "applicationCategory": "UtilitiesApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "5234167"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-bg: #1a0a00;
+            --accent-orange: #ea580c;
+            --accent-gold: #fbbf24;
+            --text-white: #ffffff;
+            --text-warm: #d4a574;
+            --card-bg: #2a1a10;
+            --card-hover: #3a2a20;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            background: rgba(26, 10, 0, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(234, 88, 12, 0.2);
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-warm);
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+        
+        .btn-download-nav {
+            background: var(--accent-orange);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-download-nav:hover {
+            background: #ff6b1a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
+        }
+        
+        /* Hero区 */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(180deg, var(--primary-bg) 0%, #2a1510 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-white), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 20px;
+            color: var(--text-warm);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-orange), #ff6b1a);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.5);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-gold);
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid var(--accent-gold);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        .hero-tags {
+            display: flex;
+            gap: 20px;
+            color: var(--text-warm);
+            font-size: 14px;
+        }
+        
+        .hero-tags span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .hero-tags span::before {
+            content: "✓";
+            color: var(--accent-orange);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(234, 88, 12, 0.2);
+        }
+        
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+            opacity: 0.2;
+            border-radius: 16px;
+            z-index: -1;
+        }
+        
+        /* 浮动数据条 */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px 0;
+            margin-top: 60px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(234, 88, 12, 0.2);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--accent-orange);
+        }
+        
+        .stat-label {
+            color: var(--text-warm);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        /* 图文模块 */
+        .feature-section {
+            padding: 100px 0;
+        }
+        
+        .feature-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .feature-block:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .feature-block:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .feature-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .feature-image img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-content h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+        
+        .feature-content p {
+            color: var(--text-warm);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .feature-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .highlight-tag {
+            background: rgba(234, 88, 12, 0.15);
+            color: var(--accent-orange);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .highlight-tag::before {
+            content: "✓";
+        }
+        
+        /* 使用场景 */
+        .scenarios {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #2a1510 0%, var(--primary-bg) 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--text-white);
+        }
+        
+        .section-title span {
+            color: var(--accent-orange);
+        }
+        
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .scenario-card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
+            border-color: var(--accent-orange);
+        }
+        
+        .scenario-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .scenario-card h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--accent-gold);
+        }
+        
+        .scenario-card p {
+            color: var(--text-warm);
+            font-size: 15px;
+        }
+        
+        /* 技术规格 */
+        .specs {
+            padding: 100px 0;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .specs-table th,
+        .specs-table td {
+            padding: 18px 25px;
+            text-align: left;
+            border-bottom: 1px solid rgba(234, 88, 12, 0.1);
+        }
+        
+        .specs-table th {
+            background: rgba(234, 88, 12, 0.2);
+            color: var(--accent-gold);
+            font-weight: 600;
+            width: 35%;
+        }
+        
+        .specs-table td {
+            color: var(--text-warm);
+        }
+        
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .specs-table tr:hover td {
+            background: rgba(234, 88, 12, 0.05);
+        }
+        
+        /* 用户评价 */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--primary-bg) 0%, #2a1510 100%);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(234, 88, 12, 0.2);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-user {
+            font-weight: 600;
+            color: var(--text-white);
+        }
+        
+        .testimonial-stars {
+            color: var(--accent-gold);
+            font-size: 18px;
+        }
+        
+        .testimonial-text {
+            color: var(--text-warm);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 100px 0;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .faq-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--accent-orange);
+            background: var(--card-hover);
+        }
+        
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .faq-question::before {
+            content: "Q";
+            background: var(--accent-orange);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .faq-answer {
+            color: var(--text-warm);
+            font-size: 14px;
+            line-height: 1.7;
+            padding-left: 34px;
+        }
+        
+        /* 底部CTA */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #2a1510 0%, var(--primary-bg) 100%);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--text-white);
+        }
+        
+        .cta-section .btn-primary {
+            font-size: 20px;
+            padding: 18px 50px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-users {
+            color: var(--text-warm);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-users strong {
+            color: var(--accent-orange);
+        }
+        
+        .cta-requirements {
+            color: var(--text-warm);
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0f0500;
+            padding: 40px 0;
+            border-top: 1px solid rgba(234, 88, 12, 0.2);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer a {
+            color: var(--text-warm);
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: var(--accent-orange);
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-tags {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .feature-block {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .feature-block:nth-child(even) {
+                direction: ltr;
+            }
+            
+            .scenarios-grid,
+            .testimonials-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-bar {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .nav-links a:not(.btn-download-nav) {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .feature-content h3 {
+                font-size: 24px;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">极速清理大师</a>
+            <div class="nav-links">
+                <a href="#features">核心功能</a>
+                <a href="#download">免费下载</a>
+                <a href="#faq">常见问题</a>
+                <a href="https://download.lianxitg.adseo.com.cn/tgadseo/download.php?id=soft_1780968555_123" class="btn-download-nav">下载</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero区 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>电脑卡慢？一扫即净</h1>
+                    <p class="subtitle">智能垃圾扫描引擎，秒级释放C盘空间，让老电脑焕发新生</p>
+                    <div class="hero-buttons">
+                        <a href="https://download.lianxitg.adseo.com.cn/tgadseo/download.php?id=soft_1780968555_123" class="btn-primary">立即下载</a>
+                        <a href="#features" class="btn-secondary">功能一览</a>
+                    </div>
+                    <div class="hero-tags">
+                        <span>免费试用</span>
+                        <span>无捆绑安装</span>
+                        <span>Win7/10/11</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/hero.jpg" alt="极速清理大师界面展示">
+                </div>
+            </div>
+            
+            <!-- 浮动数据条 -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">3秒</div>
+                    <div class="stat-label">极速扫描</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">冗余释放</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0误删</div>
+                    <div class="stat-label">安全保障</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 图文模块 -->
+    <section class="feature-section" id="features">
+        <div class="container">
+            <!-- 模块1：C盘深度瘦身 -->
+            <div class="feature-block">
+                <div class="feature-image">
+                    <img src="img/doc_translate.jpg" alt="C盘深度瘦身功能">
+                </div>
+                <div class="feature-content">
+                    <h3>C盘深度瘦身</h3>
+                    <p>智能识别系统盘冗余文件，大文件一键搬家到指定磁盘。虚拟内存优化、休眠文件清理、Windows更新残留扫除。平均释放15-30GB空间。</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">大文件可视化</span>
+                        <span class="highlight-tag">安全不误删</span>
+                        <span class="highlight-tag">一键搬家</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块2：微信/QQ专清 -->
+            <div class="feature-block">
+                <div class="feature-image">
+                    <img src="img/chat_translate.jpg" alt="微信QQ专清功能">
+                </div>
+                <div class="feature-content">
+                    <h3>微信/QQ专清模式</h3>
+                    <p>针对国产社交软件深度优化，精准清理聊天缓存、过期图片、视频文件、朋友圈缓存、小程序数据。保留重要聊天记录，只清垃圾。</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">群文件清理</span>
+                        <span class="highlight-tag">过期视频清理</span>
+                        <span class="highlight-tag">智能分类</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块3：开机加速 -->
+            <div class="feature-block">
+                <div class="feature-image">
+                    <img src="img/ocr_translate.jpg" alt="开机加速性能优化">
+                </div>
+                <div class="feature-content">
+                    <h3>开机加速 & 性能优化</h3>
+                    <p>智能分析启动项和服务，禁用不必要的开机自启程序。CPU调度优化、内存释放、磁盘碎片整理，开机时间从90秒缩短到25秒。</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">启动项管理</span>
+                        <span class="highlight-tag">内存释放</span>
+                        <span class="highlight-tag">实时监控</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 使用场景 -->
+    <section class="scenarios">
+        <div class="container">
+            <h2 class="section-title">四大使用<span>场景</span></h2>
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-icon">🏠</div>
+                    <h4>日常维护</h4>
+                    <p>每周一次智能扫描，保持电脑始终流畅，远离卡顿烦恼</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">🎮</div>
+                    <h4>游戏加速</h4>
+                    <p>清理后台进程和缓存，游戏帧率提升更流畅，畅玩3A大作</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">💼</div>
+                    <h4>办公提效</h4>
+                    <p>开机秒进桌面，软件启动速度提升40%，效率工作每一天</p>
+                </div>
+                <div class="scenario-card">
+                    <div class="scenario-icon">👨‍👩‍👧</div>
+                    <h4>家庭共享</h4>
+                    <p>一键清理全家设备，老人也能轻松操作，全家电脑都流畅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 技术规格 -->
+    <section class="specs">
+        <div class="container">
+            <h2 class="section-title">技术<span>规格</span></h2>
+            <table class="specs-table">
+                <tr>
+                    <th>软件版本</th>
+                    <td>v5.2.0</td>
+                </tr>
+                <tr>
+                    <th>安装包大小</th>
+                    <td>28.6MB</td>
+                </tr>
+                <tr>
+                    <th>支持系统</th>
+                    <td>Windows 7/8/10/11 (32/64位)</td>
+                </tr>
+                <tr>
+                    <th>处理器要求</th>
+                    <td>1GHz及以上</td>
+                </tr>
+                <tr>
+                    <th>内存要求</th>
+                    <td>1GB RAM及以上</td>
+                </tr>
+                <tr>
+                    <th>磁盘空间</th>
+                    <td>100MB可用空间</td>
+                </tr>
+                <tr>
+                    <th>语言</th>
+                    <td>简体中文/繁体中文/英文</td>
+                </tr>
+                <tr>
+                    <th>扫描引擎</th>
+                    <td>自研TurboScan 3.0</td>
+                </tr>
+                <tr>
+                    <th>扫描速度</th>
+                    <td>3秒/100GB</td>
+                </tr>
+                <tr>
+                    <th>清理项目</th>
+                    <td>200+种文件类型</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <!-- 用户评价 -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">用户<span>评价</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <span class="testimonial-user">张先生</span>
+                        <span class="testimonial-stars">★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">电脑用了3年C盘都快满了，用了极速清理大师一下释放了28G空间，开机速度从90秒变成28秒，真的太神奇了！</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <span class="testimonial-user">李女士</span>
+                        <span class="testimonial-stars">★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">微信专清功能太实用了！之前微信缓存占了我50多G，清理完保留重要聊天记录，电脑瞬间轻盈很多。</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <span class="testimonial-user">王同学</span>
+                        <span class="testimonial-stars">★★★★☆</span>
+                    </div>
+                    <p class="testimonial-text">游戏党必备！每次打游戏前清理一下，后台进程全关掉，帧率明显稳定多了，而且软件很小不占资源。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">常见<span>问题</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">极速清理大师和其他清理软件有什么不同？</div>
+                    <div class="faq-answer">采用自研TurboScan 3.0引擎，扫描速度提升300%，智能识别技术确保0误删。同时支持微信/QQ专清、大文件搬家等特色功能。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">安装包多大？会不会很占资源？</div>
+                    <div class="faq-answer">安装包仅28.6MB，运行内存占用低于100MB，轻量级设计不会影响电脑性能，可放心长期使用。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">清理过程中会删除我的个人文件吗？</div>
+                    <div class="faq-answer">不会！软件只会清理系统垃圾、缓存、临时文件等无效数据，重要文档、照片、视频等个人文件会被智能识别并保护。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何设置定时自动清理？</div>
+                    <div class="faq-answer">打开软件设置 > 定时任务，可选择每日/每周自动清理时间，设置后软件会在后台静默运行，到点自动清理。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持Windows 11吗？</div>
+                    <div class="faq-answer">完全支持！已适配Windows 7/8/10/11所有主流系统，包括最新的Windows 11 22H2版本。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">专业版多少钱？有优惠吗？</div>
+                    <div class="faq-answer">基础版完全免费，专业版年费68元，终身版198元。新用户首月1元试用，活动期间7折优惠。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">软件会自动弹窗广告吗？</div>
+                    <div class="faq-answer">绝不会！软件承诺无弹窗、无广告、无捆绑安装。卸载过程也是一键完成，没有任何残留。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何联系客服获取帮助？</div>
+                    <div class="faq-answer">可通过官网在线客服、官方邮箱support@jisqlipc.com.cn、工作日9:00-18:00电话客服等多种方式联系我们。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 底部CTA -->
+    <section class="cta-section" id="download">
+        <div class="container">
+            <h2>让电脑告别卡顿，从极速清理大师开始</h2>
+            <a href="https://download.lianxitg.adseo.com.cn/tgadseo/download.php?id=soft_1780968555_123" class="btn-primary">立即免费下载</a>
+            <p class="cta-users">已有 <strong>500万+</strong> 用户选择极速清理大师</p>
+            <p class="cta-requirements">支持 Windows 7/8/10/11 (32/64位) | 免注册 | 无捆绑</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#">隐私政策</a>
+                <a href="#">使用条款</a>
+                <a href="#">联系我们</a>
+            </div>
+            <p class="footer-copyright">© 2024 极速清理大师 版权所有 | www.jisqlipc.com.cn</p>
+        </div>
+    </footer>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3QQ0xQQnWKqf4k1F",ck:"3QQ0xQQnWKqf4k1F"})</script>
+</body>
+</html>
